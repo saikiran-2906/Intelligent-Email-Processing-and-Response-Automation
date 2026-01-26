@@ -44,3 +44,25 @@ The system shall store email details including email content, detected category,
 The system shall classify emails with no keyword matches as "General" and request additional information from the sender.
 
 ---
+
+Non-Functional Requirements
+
+1. Performance
+The system shall process and classify each email within a few seconds of submission.
+
+2. Accuracy
+The system shall classify emails accurately based on the defined keyword matching rules.
+
+3. Reliability
+The system shall operate reliably for multiple email inputs without failure.
+
+4. Usability
+The system shall provide a simple and user-friendly interface for email submission and viewing responses.
+
+5. Maintainability
+The system shall allow easy modification of keyword lists and response templates.
+
+6. Security
+The system shall restrict access to stored email logs and administrative functions to authorized users only.
+
+---
