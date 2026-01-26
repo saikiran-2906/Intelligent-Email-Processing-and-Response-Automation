@@ -8,6 +8,7 @@ The purpose of this document is to define the requirements of the Intelligent Em
 
 1.2 Scope
 The system aims to reduce manual effort in handling repetitive emails by automatically identifying email intent and responding accordingly. It is intended for use in organizations that handle large volumes of customer or user emails.
+
 ---
 2. Functional Requirements
 
@@ -66,3 +67,13 @@ The system shall allow easy modification of keyword lists and response templates
 The system shall restrict access to stored email logs and administrative functions to authorized users only.
 
 ---
+4. Assumptions and Constraints
+
+Assumptions
+- Emails are written in English.
+- Emails contain text-based content.
+- Keyword lists are predefined by the system administrator.
+
+Constraints
+- Integration with real email servers is optional.
+- Machine learning techniques are not mandatory for classification
