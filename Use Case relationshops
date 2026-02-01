@@ -1,0 +1,21 @@
+🔹 USE CASE RELATIONSHIPS
+✅ Association
+
+Customer → Submit Customer Email
+
+Admin → Manage Keywords
+
+Support Executive → View Logs
+
+✅ Include Relationships
+
+Classify Email <<include>> Preprocess Email
+
+Generate Automated Response <<include>> Classify Email
+
+Send Automated Reply <<include>> Generate Automated Response
+
+✅ Extend Relationships
+
+Forward Email to Department <<extend>> Generate Automated Response
+(Only when auto-reply is insufficient)
