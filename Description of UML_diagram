@@ -1,0 +1,120 @@
+✅ Class 1: Email
+👉 Represents a single customer email.
+
+Attributes (data stored inside Email)
+emailId : int
+→ Unique number to identify each email
+
+sender : String
+→ Customer’s email address
+
+subject : String
+→ Email subject line
+
+body : String
+→ Actual message content
+
+category : String
+→ Result of classification
+(Order / Refund / Complaint etc.)
+
+status : String
+→ Processing status
+(Pending / Resolved / Forwarded)
+
+Methods (actions Email can perform)
+getContent()
+→ Returns subject + body text
+Used by classifier
+
+setCategory()
+→ Saves detected category
+
+markProcessed()
+→ Updates status after handling
+
+✅ Class 2: EmailClassifier
+👉 Brain of the system — decides category.
+
+Attributes
+keywordDictionary : Map
+→ Stores keywords for each category
+
+Methods
+preprocess()
+→ Cleans email text
+(lowercase, remove symbols)
+
+classify()
+→ Main function
+Calls keyword matching
+Returns category
+
+matchKeywords()
+→ Counts keyword matches
+Chooses best category
+
+✅ Class 3: ResponseGenerator
+👉 Sends automated replies.
+
+Attributes
+templates : Map
+→ Prewritten responses
+
+Methods
+generateResponse()
+→ Picks correct template
+
+sendResponse()
+→ Sends reply to customer
+
+✅ Class 4: EmailLogger
+👉 Keeps record of all emails.
+
+Attributes
+logDatabase : List
+→ Stores email history
+
+Methods
+logEmail()
+→ Saves processed email
+
+viewLogs()
+→ Shows stored logs
+
+✅ Class 5: Admin
+👉 System controller.
+
+Attributes
+adminId : int
+→ Admin identifier
+
+name : String
+→ Admin name
+
+Methods
+updateKeywords()
+→ Changes classification rules
+
+updateTemplates()
+→ Edits auto-reply messages
+
+viewLogs()
+→ Checks email records
+
+✅ Class 6: SupportExecutive
+👉 Human fallback support.
+
+Attributes
+employeeId : int
+→ Staff ID
+
+name : String
+→ Staff name
+
+Methods
+handleEmail()
+→ Handles forwarded emails
+
+resolveIssue()
+→ Marks issue solved
