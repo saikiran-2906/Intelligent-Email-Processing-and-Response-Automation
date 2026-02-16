@@ -1,4 +1,4 @@
-## Why Layered Architecture is the Best Choice
+## Why Layered Architecture is the Best Choice?
 
 This project follows a **Layered Architecture** pattern to ensure clean separation of concerns, better maintainability, and scalability.
 
@@ -37,6 +37,16 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 - Clear modular structure
 - Clean separation of concerns
 - Ideal for academic and demonstration projects
+
+---
+
+### ✅ Reusability
+
+- Business logic can be reused across:
+  - Web applications
+  - Mobile applications
+  - REST APIs
+- Encourages modular and reusable code design
 
 ---
 
