@@ -1,54 +1,197 @@
- Components (Application Components) 
-The system is divided into the following layers and components:
-
 1️⃣ Presentation Layer (User Interface)
-Web Interface (HTML/CSS/JS)
+Component: Web Interface (HTML / CSS / JavaScript)
 
-Collects email subject and body
+Description:
+The Presentation Layer is the front-end of the system. It provides an interface through which users interact with the application.
 
-Displays detected category and auto‑reply
+Responsibilities:
+
+Collects email subject and email body from the user
+
+Sends the input data to the Flask controller
+
+Displays:
+
+Detected email category
+
+Generated auto-reply message
+
+Provides a clean and user-friendly experience
+
+Technologies Used:
+
+HTML – Structure of the page
+
+CSS – Styling and layout
+
+JavaScript – Client-side validation and interaction
+
+Why this layer is important:
+It separates user interaction logic from business logic, making UI changes easier without affecting backend functionality.
 
 2️⃣ Application / Controller Layer
-Flask Controller
+Component: Flask Controller
 
-Receives user requests
+Description:
+This layer acts as a bridge between the user interface and the business logic.
 
-Coordinates flow between layers
+Responsibilities:
+
+Receives HTTP requests from the Presentation Layer
+
+Validates user input
+
+Passes email data to the Business Logic Layer
+
+Receives classification results and auto-reply
+
+Sends processed results back to the UI
+
+Key Role:
+
+Controls the flow of execution
+
+Ensures loose coupling between layers
+
+Why this layer is important:
+It centralizes request handling and avoids mixing UI code with processing logic.
+
 3️⃣ Business Logic Layer
-Core intelligence of the system:
 
-EmailClassifier
+This is the core intelligence of the system.
 
-Preprocesses email text
+🔹 Component 1: EmailClassifier
 
-Classifies email using keywords
+Description:
+Responsible for understanding and classifying the email content.
 
-ResponseGenerator
+Functions:
 
-Selects appropriate auto‑reply
+Preprocesses email text:
 
-Generates response message
+Converts text to lowercase
+
+Removes punctuation and extra spaces
+
+Uses keyword-based classification
+
+Identifies categories such as:
+
+Complaint
+
+Inquiry
+
+Feedback
+
+Support request
+
+Output:
+
+Detected email category
+
+🔹 Component 2: ResponseGenerator
+
+Description:
+Generates an appropriate auto-reply based on the classified category.
+
+Functions:
+
+Selects a predefined response template
+
+Customizes the reply if required
+
+Generates a professional response message
+
+Output:
+
+Auto-generated email reply
+
+Why this layer is important:
+It encapsulates all decision-making logic, making the system easy to enhance (e.g., adding ML models later).
 
 4️⃣ Data Layer
-EmailLogger
+Component: EmailLogger
 
-Stores processed email details
+Description:
+Responsible for data storage and logging.
 
-Maintains logs for admin and support
+Responsibilities:
 
-(Optional: Database such as SQLite / MySQL)
+Stores:
+
+Email subject
+
+Email body
+
+Detected category
+
+Generated response
+
+Date and time of processing
+
+Maintains logs for:
+
+Admin review
+
+Support tracking
+
+Optional Storage:
+
+SQLite (for lab/demo)
+
+MySQL (for scalable deployment)
+
+Why this layer is important:
+It ensures traceability, auditing, and debugging support.
 
 5️⃣ Administrative Components
-Admin Module
 
-Updates keywords
+These components allow human control and system management.
 
-Updates response templates
+🔹 Admin Module
 
-Views email logs
+Responsibilities:
 
-SupportExecutive Module
+Updates keyword lists for classification
 
-Handles unresolved emails
+Modifies auto-reply templates
 
-Manually resolves issues
+Views processed email logs
+
+Monitors system performance
+
+Benefit:
+
+Makes the system configurable without changing code
+
+🔹 Support Executive Module
+
+Responsibilities:
+
+Handles emails that are:
+
+Misclassified
+
+Unresolved
+
+Manually responds to complex issues
+
+Updates resolution status
+
+Benefit:
+
+Ensures no important email is ignored
+
+Provides human intervention when automation fails
+
+✅ Summary (For Lab Viva)
+
+The system uses a layered architecture
+
+Each layer has a single responsibility
+
+Business logic is independent of UI and database
+
+Admin and support modules improve reliability and control
+
+Architecture is scalable and extensible
