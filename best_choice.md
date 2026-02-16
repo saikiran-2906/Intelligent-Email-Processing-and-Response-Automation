@@ -22,3 +22,25 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 - Supports future expansion with minimal refactoring
 
 ---
+
+### ✅ Performance
+
+- Simple and efficient request-response flow
+- Minimal overhead compared to microservices architecture
+- Suitable for lightweight academic and small-to-medium applications
+
+---
+
+### ✅ Simplicity
+
+- Easy to understand and implement
+- Clear modular structure
+- Clean separation of concerns
+- Ideal for academic and demonstration projects
+
+---
+
+### 📌 Conclusion
+
+The **Layered Architecture** provides the right balance of simplicity, maintainability, scalability, and performance, making it the most suitable architectural choice for this project.
+
