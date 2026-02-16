@@ -14,3 +14,41 @@ Flask Controller
 Receives user requests
 
 Coordinates flow between layers
+3️⃣ Business Logic Layer
+Core intelligence of the system:
+
+EmailClassifier
+
+Preprocesses email text
+
+Classifies email using keywords
+
+ResponseGenerator
+
+Selects appropriate auto‑reply
+
+Generates response message
+
+4️⃣ Data Layer
+EmailLogger
+
+Stores processed email details
+
+Maintains logs for admin and support
+
+(Optional: Database such as SQLite / MySQL)
+
+5️⃣ Administrative Components
+Admin Module
+
+Updates keywords
+
+Updates response templates
+
+Views email logs
+
+SupportExecutive Module
+
+Handles unresolved emails
+
+Manually resolves issues
