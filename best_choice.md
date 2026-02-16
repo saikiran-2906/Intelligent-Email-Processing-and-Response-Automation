@@ -4,7 +4,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### ✅ Maintainability
+### Maintainability
 
 - Clear separation between **UI, Business Logic, and Data Access layers**
 - Email classification rules can be modified without affecting other layers
@@ -14,7 +14,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### ✅ Scalability
+### Scalability
 
 - Classification logic can evolve from **rule-based implementation to Machine Learning models**
 - Database layer can scale independently as data grows
@@ -23,7 +23,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### ✅ Performance
+### Performance
 
 - Simple and efficient request-response flow
 - Minimal overhead compared to microservices architecture
@@ -31,7 +31,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### ✅ Simplicity
+### Simplicity
 
 - Easy to understand and implement
 - Clear modular structure
@@ -40,7 +40,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### ✅ Reusability
+### Reusability
 
 - Business logic can be reused across:
   - Web applications
@@ -50,7 +50,7 @@ This project follows a **Layered Architecture** pattern to ensure clean separati
 
 ---
 
-### 📌 Conclusion
+### Conclusion
 
 The **Layered Architecture** provides the right balance of simplicity, maintainability, scalability, and performance, making it the most suitable architectural choice for this project.
 
