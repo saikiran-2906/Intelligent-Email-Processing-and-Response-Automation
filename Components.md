@@ -1,4 +1,4 @@
-II. Components (Application Components) – 10 Marks
+ Components (Application Components) 
 The system is divided into the following layers and components:
 
 1️⃣ Presentation Layer (User Interface)
