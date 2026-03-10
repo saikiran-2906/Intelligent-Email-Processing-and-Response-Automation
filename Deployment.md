@@ -1,4 +1,4 @@
-Deployment Strategy
+
 Deployment strategy describes how the developed application is installed, configured, and made available on the server so users can access it.
 
 The following steps will be followed to deploy the Intelligent Email Processing and Response Automation System.
@@ -119,4 +119,5 @@ or using production servers like:
 
 gunicorn app:app
 Once the server starts running, users can access the application through a web browser.
+
 
