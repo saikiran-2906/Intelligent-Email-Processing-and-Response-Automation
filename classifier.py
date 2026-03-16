@@ -26,4 +26,3 @@ class EmailClassifier:
 
                     return category
 
-        return "General Query"

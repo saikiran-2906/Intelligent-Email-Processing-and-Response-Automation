@@ -1,8 +1,7 @@
-Security Measures 
-Security measures are used to protect the system from unauthorized access, attacks, and data misuse.
+<<<<<<< HEAD
+Security Measures Security measures are used to protect the system from unauthorized access, attacks, and data misuse.
 
-1️⃣ HTTPS Encryption
-What it means
+1️⃣ HTTPS Encryption What it means
 
 HTTPS is a secure communication protocol used between the user’s browser and the server.
 
@@ -22,15 +21,13 @@ Example in your project
 
 When a customer sends an email message through the web interface:
 
-User → HTTPS → Server
-The message is encrypted, so no one can intercept or read it.
+User → HTTPS → Server The message is encrypted, so no one can intercept or read it.
 
 Simple line for assignment
 
 HTTPS encryption is used to protect communication between users and the server by encrypting transmitted data.
 
-2️⃣ Firewall Protection
-What it means
+2️⃣ Firewall Protection What it means
 
 A firewall is a security system that controls incoming and outgoing network traffic.
 
@@ -50,16 +47,13 @@ Example in your project
 
 The firewall allows only required services like:
 
-Port 80  → HTTP
-Port 443 → HTTPS
-Other unknown connections are blocked automatically.
+Port 80 → HTTP Port 443 → HTTPS Other unknown connections are blocked automatically.
 
 Simple line for assignment
 
 A firewall is used to restrict unauthorized network access to the server and protect the application from external attacks.
 
-3️⃣ Input Validation
-What it means
+3️⃣ Input Validation What it means
 
 Input validation checks whether the data entered by users is valid and safe.
 
@@ -69,16 +63,11 @@ Why it is needed
 
 Without validation, attackers could send malicious inputs like:
 
-SQL injection
-script attacks
-invalid data
-Example in your project
+SQL injection script attacks invalid data Example in your project
 
 When a user enters:
 
-Subject
-Message
-The system checks that:
+Subject Message The system checks that:
 
 text length is valid
 
@@ -90,16 +79,13 @@ Simple line for assignment
 
 Input validation ensures that only valid and safe data is accepted from users to prevent malicious inputs.
 
-4️⃣ Authentication System
-What it means
+4️⃣ Authentication System What it means
 
 Authentication verifies the identity of users before allowing access to the system.
 
 Users must log in using:
 
-username
-password
-Why it is needed
+username password Why it is needed
 
 Your system has different roles:
 
@@ -113,10 +99,7 @@ Each role must access only the features allowed to them.
 
 Example in your project
 
-Customer → Email automation system
-Admin → View database logs
-Support Executive → Respond to unresolved emails
-Authentication ensures that:
+Customer → Email automation system Admin → View database logs Support Executive → Respond to unresolved emails Authentication ensures that:
 
 customers cannot access admin dashboard
 
@@ -125,3 +108,15 @@ only admins can view logs
 Simple line for assignment
 
 Authentication verifies user identity and restricts system access based on user roles such as customer, admin, and support executive.
+=======
+Security Measures 
+Basic security mechanisms include:
+
+HTTPS encryption for secure communication
+
+Firewall configuration on the cloud server
+
+Input validation to prevent malicious inputs
+
+Admin authentication for accessing logs and management features
+>>>>>>> d112ed5822a25c3f79603871755700285ffa1ed2

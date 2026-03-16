@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MailFlow — Login</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-card">
+
+    <div class="login-logo">MailFlow</div>
+    <div class="login-tagline">Email Automation System</div>
+
+    <form action="/login" method="POST" id="login-form">
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required autocomplete="username">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+      </div>
+
+      <hr class="divider">
+
+      <div class="form-group">
+        <label>Sign in as</label>
+        <div class="role-grid">
+          <div class="role-option selected" data-role="customer" onclick="selectRole(this)">
+            <span class="role-icon">👤</span>
+            <span class="role-label">Customer</span>
+          </div>
+          <div class="role-option" data-role="support" onclick="selectRole(this)">
+            <span class="role-icon">🎧</span>
+            <span class="role-label">Support</span>
+          </div>
+          <div class="role-option" data-role="admin" onclick="selectRole(this)">
+            <span class="role-icon">⚙️</span>
+            <span class="role-label">Admin</span>
+          </div>
+        </div>
+        <input type="hidden" name="role" id="role-input" value="customer">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full mt-16">Sign in</button>
+
+    </form>
+
+    <div class="alert alert-danger mt-8" id="error-msg">
+      <div class="alert-label">Login failed</div>
+      <div class="alert-text" id="error-text">Invalid username or password.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function selectRole(el) {
+    document.querySelectorAll('.role-option').forEach(r => r.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById('role-input').value = el.dataset.role;
+  }
+
+  // Show error if URL has ?error=1
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('error')) {
+    const msg = document.getElementById('error-msg');
+    msg.classList.add('show');
+    document.getElementById('error-text').textContent =
+      params.get('error') === 'unauthorized'
+        ? 'You do not have permission to access that page.'
+        : 'Invalid username or password. Please try again.';
+  }
+</script>
+
+</body>
+</html>

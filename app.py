@@ -90,6 +90,29 @@ def process_email():
 @app.route("/logs")
 def logs():
     return jsonify(logger.view_logs())
+@app.route("/index.html")
+def index_html():
+    return render_template("index.html")
+
+
+@app.route("/customer.html")
+def customer_html():
+    return render_template("customer.html")
+
+
+@app.route("/admin.html")
+def admin_html():
+    return render_template("admin.html")
+
+
+@app.route("/support.html")
+def support_html():
+    return render_template("support.html")
+
+
+@app.route("/login.html")
+def login_html():
+    return render_template("login.html")
 
 
 if __name__ == "__main__":

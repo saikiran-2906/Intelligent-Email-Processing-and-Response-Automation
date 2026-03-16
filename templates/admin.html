@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MailFlow — Admin Panel</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-name">MailFlow</div>
+      <div class="logo-sub">Email Automation</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Main</div>
+
+      <a href="index.html" class="nav-link">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="1" y="1" width="6" height="6" rx="1.2" fill="currentColor"/>
+            <rect x="9" y="1" width="6" height="6" rx="1.2" fill="currentColor"/>
+            <rect x="1" y="9" width="6" height="6" rx="1.2" fill="currentColor"/>
+            <rect x="9" y="9" width="6" height="6" rx="1.2" fill="currentColor"/>
+          </svg>
+        </span>
+        Dashboard
+      </a>
+
+      <a href="customer.html" class="nav-link">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M1 6l7 4.5L15 6" stroke="currentColor" stroke-width="1.3"/>
+          </svg>
+        </span>
+        Compose Email
+      </a>
+
+      <div class="nav-section-label">Roles</div>
+
+      <a href="support.html" class="nav-link">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M5.5 6.5a2.5 2.5 0 015 0c0 2-2.5 2-2.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <circle cx="8" cy="12.5" r=".8" fill="currentColor"/>
+          </svg>
+        </span>
+        Support
+        <span class="badge">4</span>
+      </a>
+
+      <a href="admin.html" class="nav-link active">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="5" r="2.8" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M2 14c0-3.31 2.686-6 6-6s6 2.69 6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Admin
+      </a>
+
+      <div class="nav-section-label">Account</div>
+
+      <a href="login.html" class="nav-link">
+        <span class="nav-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3H3a1 1 0 00-1 1v8a1 1 0 001 1h3M10 11l3-3-3-3M13 8H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        Logout
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <div class="user-avatar">AD</div>
+        <div>
+          <div class="user-name">Admin User</div>
+          <div class="user-role">Administrator</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main-area">
+    <header class="topbar">
+      <div class="topbar-title">Admin Panel</div>
+      <div class="topbar-actions">
+        <button class="btn btn-primary" onclick="alert('Invite user — wire to your backend')">+ Invite User</button>
+      </div>
+    </header>
+
+    <main class="page-content">
+
+      <!-- System stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total Users</div>
+          <div class="stat-value">142</div>
+          <div class="stat-delta">↑ 3 this week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Support Agents</div>
+          <div class="stat-value">8</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">System Uptime</div>
+          <div class="stat-value">99.9%</div>
+          <div class="stat-delta">Last 30 days</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Emails Today</div>
+          <div class="stat-value">318</div>
+          <div class="stat-delta">↑ 8% vs yesterday</div>
+        </div>
+      </div>
+
+      <!-- User management table -->
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">User Management</div>
+          <input
+            type="text"
+            placeholder="Search users…"
+            style="padding:7px 12px;border:1px solid var(--border-strong);border-radius:var(--radius-md);font-size:13px;outline:none;width:200px;"
+            oninput="searchUsers(this.value)"
+          >
+        </div>
+
+        <table class="data-table" id="user-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Last Active</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="user-tbody">
+            <tr>
+              <td>
+                <div class="flex items-center gap-8">
+                  <div class="user-avatar" style="width:28px;height:28px;font-size:11px;">AD</div>
+                  <span class="font-semibold">Admin User</span>
+                </div>
+              </td>
+              <td class="text-muted">admin@system.io</td>
+              <td><span class="tag tag-admin">Admin</span></td>
+              <td><span class="tag tag-success">Active</span></td>
+              <td class="text-muted text-sm">Just now</td>
+              <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;" disabled>Edit</button></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-8">
+                  <div class="user-avatar" style="width:28px;height:28px;font-size:11px;background:#eef6ee;color:#1a8a4a;">RS</div>
+                  <span class="font-semibold">Riya Sharma</span>
+                </div>
+              </td>
+              <td class="text-muted">riya@team.io</td>
+              <td><span class="tag tag-support">Support</span></td>
+              <td><span class="tag tag-success">Active</span></td>
+              <td class="text-muted text-sm">5m ago</td>
+              <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="alert('Edit Riya — wire to backend')">Edit</button></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-8">
+                  <div class="user-avatar" style="width:28px;height:28px;font-size:11px;background:#eef6ee;color:#1a8a4a;">PM</div>
+                  <span class="font-semibold">Priya Mehta</span>
+                </div>
+              </td>
+              <td class="text-muted">priya@team.io</td>
+              <td><span class="tag tag-support">Support</span></td>
+              <td><span class="tag tag-success">Active</span></td>
+              <td class="text-muted text-sm">22m ago</td>
+              <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="alert('Edit Priya — wire to backend')">Edit</button></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-8">
+                  <div class="user-avatar" style="width:28px;height:28px;font-size:11px;background:#f0f1f4;color:#5a5f6e;">JA</div>
+                  <span class="font-semibold">James Acme</span>
+                </div>
+              </td>
+              <td class="text-muted">james@acme.com</td>
+              <td><span class="tag tag-general">Customer</span></td>
+              <td><span class="tag tag-success">Active</span></td>
+              <td class="text-muted text-sm">1h ago</td>
+              <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="alert('Edit James — wire to backend')">Edit</button></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-8">
+                  <div class="user-avatar" style="width:28px;height:28px;font-size:11px;background:#f0f1f4;color:#5a5f6e;">SK</div>
+                  <span class="font-semibold">Sara K.</span>
+                </div>
+              </td>
+              <td class="text-muted">sara.k@corp.io</td>
+              <td><span class="tag tag-general">Customer</span></td>
+              <td><span class="tag tag-urgent">Locked</span></td>
+              <td class="text-muted text-sm">14m ago</td>
+              <td><button class="btn btn-danger" style="padding:4px 10px;font-size:12px;" onclick="unlockUser('Sara K.')">Unlock</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  function searchUsers(query) {
+    const q = query.toLowerCase();
+    document.querySelectorAll('#user-tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  }
+
+  function unlockUser(name) {
+    if (confirm('Unlock account for ' + name + '?')) {
+      alert('Account unlocked! Wire this to your backend /unlock endpoint.');
+    }
+  }
+</script>
+
+</body>
+</html>
