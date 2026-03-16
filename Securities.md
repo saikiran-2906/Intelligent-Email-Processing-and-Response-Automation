@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Security Measures Security measures are used to protect the system from unauthorized access, attacks, and data misuse.
 
 1️⃣ HTTPS Encryption What it means
@@ -107,3 +108,15 @@ only admins can view logs
 Simple line for assignment
 
 Authentication verifies user identity and restricts system access based on user roles such as customer, admin, and support executive.
+=======
+Security Measures 
+Basic security mechanisms include:
+
+HTTPS encryption for secure communication
+
+Firewall configuration on the cloud server
+
+Input validation to prevent malicious inputs
+
+Admin authentication for accessing logs and management features
+>>>>>>> d112ed5822a25c3f79603871755700285ffa1ed2

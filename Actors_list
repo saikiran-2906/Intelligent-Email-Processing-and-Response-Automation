@@ -1,0 +1,34 @@
+Actors List
+1️⃣ Customer (Primary Actor)
+
+Sends emails to the e-commerce support system
+
+Receives automated responses
+
+Interacts with:
+
+Submit Customer Email
+
+Receive Automated Reply
+
+2️⃣ Support Executive
+
+Handles emails that cannot be resolved automatically
+
+Interacts with:
+
+View Email Logs
+
+Handle Forwarded Emails
+
+3️⃣ System Administrator
+
+Maintains the system configuration
+
+Interacts with:
+
+Manage Keywords
+
+Manage Response Templates
+
+View Logs
