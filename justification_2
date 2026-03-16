@@ -1,0 +1,42 @@
+Justification of Architecture Style
+(Layered Architecture)
+✅ Definition of granularity:
+->Granularity means how components are divided
+->Each component handles one specific responsibility
+->Components are logically separated, not mixed
+->This improves clarity and modularity
+
+✅ How our project shows layered granularity:
+->Email processing is split into independent modules
+->Each module performs a single function
+->Modules communicate through clear interfaces
+->No module directly controls another module’s internal logic
+
+✅ Component separation in the system:
+->UI handles only user interaction
+->Classification module handles only email categorization
+->Response module handles only auto‑reply generation
+->Logger handles only data storage
+->Admin module handles only system management
+👉 Each component is small, focused, and replaceable.
+
+✅ Independence of layers:
+->Changing classification rules does not affect UI
+->Changing UI does not affect logging
+->Logging can be upgraded to a database without changing business logic
+->Response templates can change without touching classifier
+->This shows low coupling and high cohesion.
+
+✅ Flow control is structured
+
+User Input
+   ↓
+Processing
+   ↓
+Response
+   ↓
+Logging
+
+-Data moves step‑by‑step
+-No circular dependencies
+-Clear execution order

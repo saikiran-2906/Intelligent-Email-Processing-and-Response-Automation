@@ -1,0 +1,26 @@
+Software Architecture for
+Intelligent Email Processing and Response Automation System
+
+I. Chosen Software Architecture Style
+✅ Layered Architecture
+
+I‑A. Justification: Why this system is Layered Architecture
+
+Definition of Layered Architecture:
+
+->Software is divided into distinct layers
+->Each layer has a specific responsibility
+->Layers interact only with adjacent layers
+
+How our project fits this architecture:
+
+->Components are clearly separated by functionality
+->Each layer performs a well‑defined role
+->Changes in one layer do not affect others
+
+Granularity of components:
+
+->Fine‑grained logical components
+->Each layer contains related modules only
+->High cohesion within layers, low coupling between layers
+
