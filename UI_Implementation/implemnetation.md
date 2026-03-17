@@ -1,4 +1,4 @@
-Choice of User Interface for the System (10 Marks)
+Choice of User Interface for the System
 Selected UI Type: Menu‑Based Graphical User Interface (GUI)
 The Intelligent Email Processing and Response Automation System uses a menu‑based graphical user interface implemented through web pages.
 
