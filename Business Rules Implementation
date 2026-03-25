@@ -28,3 +28,52 @@ Rules:
 Empty subject or message → not allowed
 Input must be valid text
 System rejects incomplete inputs
+
+🔹 3. Email Classification Rules
+These rules define how emails are categorized.
+Every email must be classified before further processing.
+
+Classification is based on:
+Keyword matching
+Predefined category rules
+
+Rules:
+If keywords match → assign corresponding category
+If no keywords match → assign “General Query”
+Only one category is assigned per email
+
+🔹 4. Automated Response Rules
+These rules define how responses are generated.
+Each category must have a predefined response template.
+
+Rules:
+System must generate a response for every classified email
+No email should remain without a reply
+Response must match the detected category
+
+👉 Example:
+Refund → “Your refund request is being processed”
+
+🔹 5. Email Logging Rules
+These rules ensure proper record keeping.
+Every processed email must be stored in the system.
+
+Rules:
+Log must include:
+Sender
+Subject
+Category
+
+Timestamp (optional)
+Logging must happen after processing every email
+Logs must be accessible only to Admin
+
+🔹 6. Support Escalation Rules
+These rules handle cases where automation is insufficient.
+Emails that cannot be clearly classified are marked for support.
+
+Rules:
+Unclassified or complex emails → forwarded to Support Executive
+Support Executive must manually review and respond
+Once handled → status updated to resolved
+
