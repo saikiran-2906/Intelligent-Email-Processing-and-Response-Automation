@@ -1,0 +1,30 @@
+Business rules define the conditions and logic that control how the system behaves. In the Intelligent Email Processing and Response Automation System, business rules are implemented across different modules to ensure correct functionality, security, and consistency.
+
+🔹 1. User Authentication & Role-Based Access Rules
+These rules control who can access what features in the system.
+Every user must log in using valid credentials (username and password).
+
+Each user is assigned a specific role:
+Customer
+Admin
+Support Executive
+
+Rules:
+Customer → can only send emails and view responses
+Admin → can only view logs and manage system data
+Support Executive → can handle unresolved emails manually
+
+
+👉 Unauthorized users cannot access restricted modules.
+
+🔹 2. Email Input Rules
+These rules ensure that only valid emails are processed.
+
+Email must contain:
+Subject
+Message Body
+
+Rules:
+Empty subject or message → not allowed
+Input must be valid text
+System rejects incomplete inputs
