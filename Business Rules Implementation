@@ -77,3 +77,29 @@ Unclassified or complex emails → forwarded to Support Executive
 Support Executive must manually review and respond
 Once handled → status updated to resolved
 
+🔹 7. Data Processing Rules
+These rules define how input data is handled internally.
+
+Rules:
+Email text must be:
+Converted to lowercase
+Cleaned (remove unnecessary symbols)
+Subject and body must be combined before classification
+
+🔹 8. System Consistency Rules
+These rules ensure stable system behavior.
+
+Rules:
+Each email follows the same processing flow:
+Input → Classification → Response → Logging
+No step can be skipped
+System must maintain consistent output format
+
+🔹 9. Security Rules
+These rules protect the system.
+
+Rules:
+Only authenticated users can access the system
+Role-based restrictions must be enforced
+Invalid or harmful inputs must be rejected
+
